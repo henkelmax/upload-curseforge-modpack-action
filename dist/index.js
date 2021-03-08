@@ -6,6 +6,7 @@ module.exports =
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __nccwpck_require__) => {
 
 const core = __nccwpck_require__(186);
+const fs = __nccwpck_require__(747);
 const fetch = __nccwpck_require__(467);
 const FormData = __nccwpck_require__(334);
 
