@@ -18,7 +18,7 @@ const FormData = __nccwpck_require__(334);
         const modpackServerPath = core.getInput('modpack-server-path');
         const changelog = core.getInput('changelog');
         const changelogFormat = core.getInput('changelog-format');
-        const gameVersion = Number.parseInt(core.getInput('game-version'));
+        const gameVersion = core.getInput('game-version');
         const displayName = core.getInput('display-name');
         const serverDisplayName = core.getInput('server-display-name');
         const releaseType = core.getInput('release-type');
@@ -55,6 +55,8 @@ const FormData = __nccwpck_require__(334);
 
         if (modpackServerPath) {
             await upload(projectID, apiToken, modpackPath, {
+                changelog: changelog,
+                changelogType: changelogFormat,
                 displayName: serverDisplayName,
                 parentFileID: fileID,
                 releaseType: releaseType
