@@ -47,7 +47,7 @@ const FormData = require('form-data');
         core.startGroup('Upload Modpack Server');
 
         if (modpackServerPath) {
-            await upload(projectID, apiToken, modpackPath, {
+            await upload(projectID, apiToken, modpackServerPath, {
                 changelog: changelog,
                 changelogType: changelogFormat,
                 displayName: serverDisplayName,

@@ -54,7 +54,7 @@ const FormData = __nccwpck_require__(334);
         core.startGroup('Upload Modpack Server');
 
         if (modpackServerPath) {
-            await upload(projectID, apiToken, modpackPath, {
+            await upload(projectID, apiToken, modpackServerPath, {
                 changelog: changelog,
                 changelogType: changelogFormat,
                 displayName: serverDisplayName,
