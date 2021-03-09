@@ -21,7 +21,11 @@ const FormData = __nccwpck_require__(334);
         const gameVersion = core.getInput('game-version');
         const displayName = core.getInput('display-name');
         const serverDisplayName = core.getInput('server-display-name');
-        const releaseType = core.getInput('release-type');
+        let releaseType = core.getInput('release-type');
+
+        if (releaseType) {
+            releaseType = releaseType.toLowerCase();
+        }
 
         core.setSecret(apiToken);
 
